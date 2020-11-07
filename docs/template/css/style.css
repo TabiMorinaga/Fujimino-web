@@ -1,61 +1,43 @@
-:root {
-  --background-color: #fef6e4;
-}
-
 body{
-  background-color: var(--background-color);
+    font-family: a-otf-futo-go-b101-pr6n, sans-serif;
 }
 
-.content{
-  width: calc(100%-20px);
-  margin-left: 10px;
+/*全体*/
+.hidden_box {
+    margin: 2em 0;/*前後の余白*/
+    margin-bottom: 7em;
+    padding: 0;
 }
 
-h2 {
-  margin-top: 60px;
-  display: inline-block;
-  position: relative;
-  padding: 15px 20px;
-  font-size: 20px;/*フォントサイズ*/
-  color: #FFF;/*フォントカラー*/
-  background: #a6d3c8;/*背景色*/
+/*ボタン装飾*/
+.hidden_box label {
+    padding: 15px;
+    font-weight: bold;
+    cursor :pointer;
 }
 
-h2:before {
-  position: absolute;
-  content: '';
-  top: 100%;
-  left: 0;
-  border: none;
-  border-bottom: solid 15px transparent;
-  border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+/*ボタンホバー時*/
+.hidden_box label:hover {
+    background: #efefef;
 }
 
-h2:after {
-  position: absolute;
-  content: '';
-  top: 100%;
-  right: 0;
-  border: none;
-  border-bottom: solid 15px transparent;
-  border-left: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
 }
 
-h3 {
-  display: inline-block;
-  position: relative;
-  padding: 15px 20px;
-  font-size: 18px;/*フォントサイズ*/
-  color: #FFF;/*フォントカラー*/
-  background: #a6d3c8;/*リボンの色*/
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
 }
 
-h3:before {
-  position: absolute;
-  content: '';
-  top: 100%;
-  left: 0;
-  border: none;
-  border-bottom: solid 15px transparent;
-  border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
 }

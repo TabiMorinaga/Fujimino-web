@@ -1,0 +1,62 @@
+:root {
+  --background-color: #fef6e4;
+}
+
+
+body{
+  background-color: var(--background-color);
+}
+
+.content{
+  width: calc(100%-20px);
+  margin-left: 10px;
+}
+
+h2 {
+  margin-top: 60px;
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 20px;/*フォントサイズ*/
+  color: #FFF;/*フォントカラー*/
+  background: #a6d3c8;/*背景色*/
+}
+
+h2:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+}
+
+h2:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-left: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+}
+
+h3 {
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 18px;/*フォントサイズ*/
+  color: #FFF;/*フォントカラー*/
+  background: #a6d3c8;/*リボンの色*/
+}
+
+h3:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+}
